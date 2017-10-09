@@ -1,1 +1,1 @@
-("~/.emacs.d/")
+("~/config/files/.emacs.d/" "~/.emacs.d/")

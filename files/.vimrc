@@ -47,7 +47,7 @@ set shiftwidth=2
 set nolinebreak
 set colorcolumn=81
 set mouse=v
-imap jj <Esc>
+imap fd <Esc>
 set number
 if has('nvim')
 	tnoremap <Esc> <C-\><C-n>
