@@ -42,7 +42,6 @@ values."
      ;; better-defaults
      emacs-lisp
      pandoc
-     org
      git
      markdown
      ;; osx
@@ -303,8 +302,10 @@ values."
    ))
 
 (defun dotspacemacs/user-init ()
-  (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
-  (push '(helm . "melpa-stable") package-pinned-packages))
+  ;;(require 'helm-bookmark)
+  ;;(push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
+  ;;(push '(helm . "melpa-stable") package-pinned-packages)
+  )
 
 (defun dotspacemacs/user-config ()
   (setq-default evil-escape-delay 0.2)
