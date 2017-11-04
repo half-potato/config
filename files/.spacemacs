@@ -31,12 +31,13 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     python
+     javascript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     python
      helm
      auto-completion
      ;; better-defaults
@@ -309,6 +310,8 @@ values."
 (defun dotspacemacs/user-config ()
   (setq-default evil-escape-delay 0.2)
   (setq-default evil-escape-key-sequence "fd")
+  (define-key evil-normal-state-map (kbd "SPC >") 'indent-relative)
+  ;;(set python-shell-interpreter "python3")
   ;; (setq TeX-auto-save t)
   ;; (setq TeX-parse-self t)
   ;; (setq TeX-save-query nil)
