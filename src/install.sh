@@ -21,7 +21,7 @@ read -p "Get colors? " -n 1 -r
 echo    
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  mkdir ~/.vim/colors
+  mkdir -p ~/.vim/colors
   cd ~/.vim/colors
   wget https://raw.githubusercontent.com/ajmwagar/vim-deus/master/colors/deus.vim
 fi

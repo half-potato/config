@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set background=dark
-colorscheme deus
+"let background=dark
+colorscheme Benokai
 command Term e term://zsh
 
 set exrc
@@ -21,6 +21,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'flazz/vim-colorschemes'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'kien/rainbow_parentheses.vim'
