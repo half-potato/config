@@ -7,6 +7,3 @@ for i in $(find files/ -type f -printf '%P\n'); do
   echo $i
   ln -s $DIR/files/$i ~/$i
 done
-
-cd ~/.emac.d
-git pull origin develop
