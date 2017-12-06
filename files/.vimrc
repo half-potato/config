@@ -3,7 +3,6 @@ filetype off                  " required
 syntax on
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 "let background=dark
-colorscheme Benokai
 command Term e term://zsh
 
 set exrc
@@ -30,6 +29,8 @@ Plugin 'Lokaltog/vim-easymotion'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+colorscheme Benokai
 
 " Nerd Tree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

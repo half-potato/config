@@ -2,11 +2,18 @@ read -p "Install packages? " -n 1 -r
 echo    
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  sudo apt-get install zsh vim
   sudo add-apt-repository ppa:kelleyk/emacs
   sudo apt-get update
-  sudo apt-get install emacs25
-  sudo apt-get install vim-youcompleteme
+  sudo apt-get install vim-youcompleteme zsh vim emacs25
+  sudo chsh $USER -s /usr/bin/zsh
+fi
+read -p "Install handy packages? " -n 1 -r
+echo    
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  sudo apt-get install python-pip python3-pip build-essential python-dev python3-dev python-setuptools python3-setuptools libpng6-dev libjpeg9-dev
+  sudo pip install numpy
+  sudo pip3 install numpy
 fi
 read -p "Clone repos? " -n 1 -r
 echo    
