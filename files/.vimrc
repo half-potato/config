@@ -82,3 +82,7 @@ let g:rbpt_colorpairs = [
 			\ ]
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
+
+" Set the type for the file type and override if file type
+" already has detected
+au BufRead,BufNewFile *.launch set filetype=xml
