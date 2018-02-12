@@ -2,8 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set background=dark
-colorscheme deus
+"let background=dark
 command Term e term://zsh
 
 set exrc
@@ -21,6 +20,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'flazz/vim-colorschemes'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'kien/rainbow_parentheses.vim'
@@ -29,6 +29,8 @@ Plugin 'Lokaltog/vim-easymotion'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+colorscheme Benokai
 
 " Nerd Tree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
