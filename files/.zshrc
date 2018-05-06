@@ -1,5 +1,6 @@
 export ZSH=~/.oh-my-zsh
-ZSH_THEME="robbyrussell"
+export TERM='xterm-256color'
+ZSH_THEME="powerlevel9k/powerlevel9k"
 export UPDATE_ZSH_DAYS=13
 plugins=(git ssh)
 #export PATH="/opt/ros/indigo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -50,9 +51,17 @@ mcd() {
 	mkdir -p "$1" && cd "$1"
 }
 
-#precmd () {print -Pn "\e]0;$(history | tail -n1 | grep -o --ignore-case "[a-z].*")\a"}
+ip() {
+  ifconfig $1 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'
+}
+
+# precmd () {print -Pn "\e]0;$(history | tail -n1 | grep -o --ignore-case "[a-z].*")\a"}
 
 #ROS
 #source ~/catkin_ws/devel/setup.zsh
 source /opt/ros/kinetic/setup.zsh
 source ~/catkin_ws/devel/setup.zsh
+#alias ros_rpi_eth="export ROS_MASTER_URI=http://10.42.0.62:11311; export ROS_IP=$(ip enx00e04c36092b)"
+alias ros_rpi_wlan="export ROS_MASTER_URI=http://192.168.4.1:11311; export ROS_IP=$(ip wlp58s0)"
+alias ros_local="export ROS_MASTER_URI=http://$(ip wlp58s0):11311; export ROS_IP=$(ip wlp58s0)"
+alias gitinit="git init; wget https://gist.githubusercontent.com/half-potato/210c816a1872638bd905bf8720a6217f/raw/75d229e1d867bd399a40a6fd8fade8e813e75132/.gitignore"
