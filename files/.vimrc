@@ -22,6 +22,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 " Plugin 'flazz/vim-colorschemes'
 " Plugin 'Valloric/YouCompleteMe'
+Plugin 'https://github.com/davisdude/vim-love-docs/tree/build'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'amdt/vim-niji'
 Plugin 'Lokaltog/vim-easymotion'
@@ -57,6 +58,7 @@ if has('nvim')
 	tnoremap <Esc> <C-\><C-n>
 endif
 autocmd Filetype clojure setlocal nowrap
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 let g:ycm_confirm_extra_conf = 0
 
