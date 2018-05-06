@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"let background=dark
+set background=dark
 command Term e term://zsh
 
 set exrc
@@ -20,17 +20,19 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'flazz/vim-colorschemes'
+" Plugin 'flazz/vim-colorschemes'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'amdt/vim-niji'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme Benokai
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Nerd Tree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -57,33 +59,6 @@ endif
 autocmd Filetype clojure setlocal nowrap
 
 let g:ycm_confirm_extra_conf = 0
-
-" Rainbow Parentheses
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-let g:rbpt_colorpairs = [
-			\ ['brown',       'RoyalBlue3'],
-			\ ['Darkblue',    'SeaGreen3'],
-			\ ['darkgray',    'DarkOrchid3'],
-			\ ['darkgreen',   'firebrick3'],
-			\ ['darkcyan',    'RoyalBlue3'],
-			\ ['darkred',     'SeaGreen3'],
-			\ ['darkmagenta', 'DarkOrchid3'],
-			\ ['brown',       'firebrick3'],
-			\ ['gray',        'RoyalBlue3'],
-			\ ['black',       'SeaGreen3'],
-			\ ['darkmagenta', 'DarkOrchid3'],
-			\ ['Darkblue',    'firebrick3'],
-			\ ['darkgreen',   'RoyalBlue3'],
-			\ ['darkcyan',    'SeaGreen3'],
-			\ ['darkred',     'DarkOrchid3'],
-			\ ['red',         'firebrick3'],
-			\ ]
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
 
 " Set the type for the file type and override if file type
 " already has detected

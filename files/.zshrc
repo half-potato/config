@@ -57,3 +57,4 @@ mcd() {
 source /opt/ros/kinetic/setup.zsh
 source ~/catkin_ws/devel/setup.zsh
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+alias clear="echo -en '\ec'"
