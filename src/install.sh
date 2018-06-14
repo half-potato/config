@@ -16,6 +16,9 @@ then
   sudo chsh $USER -s /usr/bin/zsh
   curl -fLo curl ~/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  sudo apt-get install neovim
+  sudo apt-get install python-neovim
+  sudo apt-get install python3-neovim
 fi
 read -p "Install zsh? " -n 1 -r
 echo    
