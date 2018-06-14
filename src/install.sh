@@ -14,6 +14,8 @@ then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   sudo apt-get install vim-youcompleteme vim zsh fonts-powerline
   sudo chsh $USER -s /usr/bin/zsh
+  curl -fLo curl ~/.vim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 read -p "Install zsh? " -n 1 -r
 echo    
