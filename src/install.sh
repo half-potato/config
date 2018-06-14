@@ -14,11 +14,14 @@ then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   sudo apt-get install vim-youcompleteme vim zsh fonts-powerline
   sudo chsh $USER -s /usr/bin/zsh
-  curl -fLo curl ~/.vim/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  sudo apt-add-repository ppa:neovim-ppa/stable
+  sudo apt-get update
+  wget -P ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  wget -P ~/.local/share/nvim/site/autoload/ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   sudo apt-get install neovim
-  sudo apt-get install python-neovim
-  sudo apt-get install python3-neovim
+  sudo apt-get install python-dev python-pip python3-dev python3-pip
+  sudo -H pip install neovim
+  sudo -H pip3 install neovim
 fi
 read -p "Install zsh? " -n 1 -r
 echo    
