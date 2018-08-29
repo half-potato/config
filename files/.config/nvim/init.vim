@@ -99,7 +99,7 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme morning
 set mouse=c
 set hidden
 set visualbell

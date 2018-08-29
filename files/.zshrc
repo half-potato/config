@@ -67,13 +67,12 @@ connect() {
 source /opt/ros/kinetic/setup.zsh
 source ~/catkin_ws/devel/setup.zsh
 alias clear="echo -en '\ec'"
-alias ros_rpi_wlan="export ROS_MASTER_URI=http://192.168.4.1:11311; export ROS_IP=$(ip wlp58s0)"
+#alias ros_rpi_wlan="export ROS_MASTER_URI=http://192.168.4.1:11311; export ROS_IP=$(ip wlp58s0)"
 alias ros_rpi_ant="export ROS_MASTER_URI=http://10.42.0.1:11311; export ROS_IP=10.42.0.231"
 #alias ros_local="export ROS_MASTER_URI=http://$(ip wlp58s0):11311; export ROS_IP=$(ip wlp58s0)"
 alias ros_local="export ROS_MASTER_URI=http://localhost:11311; export ROS_IP=localhost"
 alias gitinit="git init; wget https://gist.githubusercontent.com/half-potato/210c816a1872638bd905bf8720a6217f/raw; mv raw .gitignore"
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH:/usr/local/lib
 alias vim="nvim"
-
-
-. /home/amai/torch/install/bin/torch-activate
+#. /home/amai/torch/install/bin/torch-activate
+export NC=~/.config/nvim/init.vim
