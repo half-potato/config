@@ -74,3 +74,6 @@ alias ros_local="export ROS_MASTER_URI=http://localhost:11311; export ROS_IP=loc
 alias gitinit="git init; wget https://gist.githubusercontent.com/half-potato/210c816a1872638bd905bf8720a6217f/raw; mv raw .gitignore"
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH:/usr/local/lib
 alias vim="nvim"
+
+
+. /home/amai/torch/install/bin/torch-activate
